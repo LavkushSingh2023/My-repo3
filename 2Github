@@ -1,0 +1,53 @@
+* Git :- 
+   free and open source Version Control System  tools that help to tracks changes in code.
+   
+* Github :-
+   website where we host repositories online.
+
+* Using Git :-
+ 1) Command Line(Most Popular)
+ 2) IDE / Code Editor (like VSCode)
+ 3) Graphical User Interface (like GitKraken)
+ 
+* Basic Commands :-
+   Clone - cloning a repository on our local machine.
+    exa-
+     git clone<-some link-> 
+   Status - displays the state of the code.
+    exa-
+     git status  
+   add - adds new or changed files in your working directory to the Git staging area.
+   commit - it is the record of change
+    exa-
+     git commit -m "some message"
+   push - upload local repo content to remote repo
+    exa-
+     git push origin main  
+
+* Negative Cases :-
+   if we made any change by mistake and save it-
+    case1: To undo changes, get the last successful change
+     git restore.or filename(.mean all files)
+    case2: If we added the changes using git add then-
+     git restore --staged<file_path># To unstage
+     git restore <file_path> # To discard changes in the working directory
+    case3: Added changes to staging area (didn't commit) after this added more changes to file.
+     // To get the staged changes-
+     git restore --worktree index.html
+    case4: How about if we did commit also wrong files-
+     git reset --soft HEAD^ (uncommit and keep the changes)
+     git reset --hard HEAD^ (uncommit and discard the changes)
+
+* git diff --cached - it is used to seeing the changes that you are going to add.
+
+* Useful Log Options :-
+   git log -p -2 (last two commit with diff)
+   git log --stat (summary of changes)
+   git log --pretty=oneline
+   git log --pretty=format:"%h -%an, %ar: %s"
+   git log -S function_name
+
+* Merging -
+* Git Forking -
+* Gitignore -
+* Git Tagging -
